@@ -1,6 +1,5 @@
 #include <stdio.h>
-/* more headers goes there */
-/* betty style doc for function main goes there */
+
 /**
  * main - Entry point
  *
@@ -8,42 +7,41 @@
  */
 int main(void)
 {
-	int p = 48, q = 48, y = 48, x = 49;
+	int c = 0;
+	int f_d;
+	int l_d;
 
-	while (p < 58)
+	int c2;
+	int f_d2;
+	int l_d2;
+
+	while (c <= 98)
 	{
-		while (q < 58)
+		f_d = (c / 10 + '0');
+		l_d = (c % 10 + '0');
+		c2 = 0;
+		while (c2 <= 99)
 		{
-			while (y < 58)
+			f_d2 = (c2 / 10 + '0');
+			l_d2 = (c2 % 10 + '0');
+
+			if (c < c2)
 			{
-				while (x < 58)
+				putchar(f_d);
+				putchar(l_d);
+				putchar(' ');
+				putchar(f_d2);
+				putchar(l_d2);
+
+				if (c != 98)
 				{
-					putchar(p);
-					putchar(q);
+					putchar(',');
 					putchar(' ');
-					putchar(y);
-					putchar(x);
-					if (!(p == 57 &&
-						q == 56 &&
-						y == 57 &&
-						x == 57))
-					{
-						putchar(',');
-						putchar(' ');
-					}
-					x++;
 				}
-				y++;
-				x = 48;
 			}
-			q++;
-			q = p;
-			x = q + 1;
+			c2++;
 		}
-		p++;
-		q = 48;
-		y = p;
-		x = q+ 1;
+		c++;
 	}
 	putchar('\n');
 	return (0);
