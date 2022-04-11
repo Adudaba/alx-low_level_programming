@@ -39,4 +39,10 @@ dog_t *new_dog(char *name, float age, char *owner)
 		*(i + z) = *(name + z);
 	for (z = 0; z <= y; z++)
 		*(j + z) = *(owner + z);
+
+	new_doggo->name = i;
+	new_doggo->age = age;
+	new_doggo->owner = j;
+
+	return (new_doggo);
 }
